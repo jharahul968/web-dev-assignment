@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+.logo{
+  border-radius:50%;
+  height: 100px;
+  width: 100px;
+}
+.job_list{
+  display:flex;
+  margin-bottom: 20px;
+  background-color: antiquewhite;
+}
+ul{
+  list-style:none;
+}
+.job_desc{
+  display:flex;
+  flex-direction: row;
+}
+.clear-btn{
+  font-size: medium;
+  float:right;
+  cursor:pointer;
+}
+.remove-btn{
+  cursor:pointer;
+}
+.top-keywords{
+  margin: 10px;
+}
+.top-keywords button{
+  border:none;
+  font-size: medium;
+  margin-right:10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.keywords{
+  display:flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+
+}
+.keywords button{
+  margin-left: 5px;
+  font-size: large;
+  border:none;
+  cursor: pointer;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.job-location,
+.job-posted-time,
+.job-type {
+  margin-right: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin-right: 20px;
 }
