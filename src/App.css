@@ -1,53 +1,52 @@
-.logo{
-  border-radius:50%;
+.logo {
+  border-radius: 50%;
   height: 100px;
   width: 100px;
+  margin-left: 15px;
 }
-.job_list{
-  display:flex;
+.job_list {
+  display: flex;
   margin-bottom: 20px;
   background-color: antiquewhite;
+  width: 95%;
 }
-ul{
-  list-style:none;
+ul.all-jobs {
+  list-style: none;
 }
-.job_desc{
-  display:flex;
+.job_desc {
+  display: flex;
   flex-direction: row;
 }
-.clear-btn{
+.clear-btn {
   font-size: medium;
-  float:right;
-  cursor:pointer;
+  float: right;
+  cursor: pointer;
 }
-.remove-btn{
-  cursor:pointer;
+.remove-btn {
+  padding: 5px;
+  cursor: pointer;
 }
-.top-keywords{
+.top-keywords {
   margin: 10px;
 }
-.top-keywords button{
-  border:none;
+.top-keywords button {
+  border: none;
   font-size: medium;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
-.keywords{
-  display:flex;
+.keywords {
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
+  margin-left: auto;
   margin-top: 10px;
-
-
 }
-.keywords button{
+.keywords button {
   margin-left: 5px;
   font-size: large;
-  border:none;
+  border: none;
   cursor: pointer;
-
 }
-
 
 .job-location,
 .job-posted-time,
@@ -55,9 +54,27 @@ ul{
   margin-right: 20px;
 }
 
-.image{
+.image {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+}
+
+.top-bar {
+  width: 100%;
+  height: 150px;
+  /* background: rgb(221, 211, 231); */
+  background: antiquewhite;
+  margin-bottom: 30px;
+}
+
+.job-desc-list {
+  display: flex;
+  /* list-style: none; */
+  padding: 0;
+}
+
+li.middle-job {
+  margin-left: 20px;
 }

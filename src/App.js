@@ -81,52 +81,70 @@ function App() {
     return `${days} days ago`;
   };
 
-
   return (
     <div>
-      <div className='top-keywords'>
-        {selectedKeywords.map((keyword) => (
-          
-          <button key={keyword}>
-            {keyword}
-            <span
-              className="remove-btn"
-              onClick={() => handleRemoveKeyword(keyword)}
+      <div className="top-bar"></div>
+      {selectedKeywords.length > 0 && (
+        <div className="top-keywords">
+          {selectedKeywords.map((keyword) => (
+            <button key={keyword}>
+              {keyword}
+              <span
+                className="remove-btn"
+                onClick={() => handleRemoveKeyword(keyword)}
+              >
+                &#10005;
+              </span>
+            </button>
+          ))}
+          {selectedKeywords.length > 0 && (
+            <button
+              className="clear-btn"
+              // onClick={()=>setSelectedKeywords([]) }
+              onClick={() => {
+                setFilteredJobs(jobs);
+                setSelectedKeywords([]);
+              }}
             >
-              &#10005;
-            </span>
-          </button>
-        ))}
-        {selectedKeywords.length>0 && (
-                  <button
-                  className='clear-btn'
-                  // onClick={()=>setSelectedKeywords([]) }
-                  onClick={()=>{setFilteredJobs(jobs);setSelectedKeywords([])} }
+              Clear
+            </button>
+          )}
+        </div>
+      )}
 
-                  >Clear</button>
-        )}
-      </div>
-      <ul>
+      <ul className="all-jobs">
         {filteredJobs.map((job) => (
           <li key={job.position}>
             <div className="job_list">
-              <div className='image'>
-              <img src={job.company_logo} alt={job.company} className="logo" />
+              <div className="image">
+                <img
+                  src={job.company_logo}
+                  alt={job.company}
+                  className="logo"
+                />
               </div>
               <div>
                 <p>{job.company}</p>
                 <h3>{job.position}</h3>
                 <div className="job_desc">
                   <p className="job-location">{job.location}</p>
+              <ul className="job-desc-list">
+                <li className="middle-job">
                   <p className="job-posted-time">{getTimeAgo(job.posted_on)}</p>
+                  </li>
+                  <li className="middle-job">
                   <p className="job-type">{job.timing}</p>
+                  </li>
+                  </ul>
                 </div>
               </div>
               <div className="keywords">
                 {job.keywords.map((keyword) => (
                   <button
                     key={keyword}
-                    className={selectedKeywords.includes(keyword) ? "active" : ""}
+                    className={
+                      selectedKeywords.includes(keyword) ? "active" : ""
+                    }
                     onClick={() => handleKeywordClick(keyword)}
                   >
                     {keyword}
