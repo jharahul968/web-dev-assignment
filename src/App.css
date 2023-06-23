@@ -23,7 +23,7 @@ ul.all-jobs {
   cursor: pointer;
 }
 .remove-btn {
-  padding: 5px;
+  margin-left: 5px;
   cursor: pointer;
 }
 .top-keywords {
