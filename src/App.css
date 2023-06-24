@@ -78,3 +78,7 @@ ul.all-jobs {
 li.middle-job {
   margin-left: 20px;
 }
+
+button.active{
+  background-color: rgb(206, 70, 93);
+}
